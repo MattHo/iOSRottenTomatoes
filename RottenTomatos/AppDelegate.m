@@ -25,6 +25,9 @@
     
     self.window.rootViewController = nvc;
     
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor yellowColor], NSForegroundColorAttributeName, nil]];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

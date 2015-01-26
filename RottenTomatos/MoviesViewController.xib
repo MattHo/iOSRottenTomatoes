@@ -16,14 +16,43 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0Bo-3n-h8t">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="475"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" placeholder="Search movies" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCG-Gh-mgM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
+                <tabBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="PG4-aP-d3X">
+                    <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <items>
+                        <tabBarItem title="Box Office" image="movie.png" selectedImage="movie.png" id="yrB-id-hX5"/>
+                        <tabBarItem title="DVD" image="dvd.png" selectedImage="dvd.png" id="XrC-Dw-cfn"/>
+                    </items>
+                    <color key="tintColor" red="0.99516159019999995" green="1" blue="0.01785580178" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="selectedImageTintColor" red="0.99516159019999995" green="1" blue="0.01785580178" alpha="1" colorSpace="calibratedRGB"/>
+                </tabBar>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="13" y="320"/>
+            <point key="canvasLocation" x="17" y="316"/>
         </view>
     </objects>
+    <resources>
+        <image name="dvd.png" width="32" height="32"/>
+        <image name="movie.png" width="32" height="32"/>
+    </resources>
 </document>

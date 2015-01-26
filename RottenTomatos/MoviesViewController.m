@@ -25,8 +25,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.names = @[@"Jimmy", @"Alice", @"Pat", @"Nathan", @"Bobby", @"Michael", @"Joe", @"Peter", @"Nancy", @"James"];
-    
     NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -34,7 +32,6 @@
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         self.movies = responseDictionary[@"movies"];
         [self.tableView reloadData];
-        NSLog(@"response: %@", responseDictionary);
     }];
 
     self.tableView.dataSource = self;

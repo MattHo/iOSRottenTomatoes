@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A5A208F81A75906E00E7B573 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A208F61A75906E00E7B573 /* MovieDetailViewController.m */; };
 		A5A208F91A75906E00E7B573 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A208F71A75906E00E7B573 /* MovieDetailViewController.xib */; };
+		A5A208FB1A75CFB100E7B573 /* dvd.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A208FA1A75CFB100E7B573 /* dvd.png */; };
+		A5A208FD1A75D1A800E7B573 /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A208FC1A75D1A800E7B573 /* movie.png */; };
 		A5B332BE1A6F545D007E41B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B332BD1A6F545D007E41B2 /* main.m */; };
 		A5B332C11A6F545D007E41B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B332C01A6F545D007E41B2 /* AppDelegate.m */; };
 		A5B332C91A6F545D007E41B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B332C81A6F545D007E41B2 /* Images.xcassets */; };
@@ -36,6 +38,8 @@
 		A5A208F51A75906E00E7B573 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		A5A208F61A75906E00E7B573 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 		A5A208F71A75906E00E7B573 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
+		A5A208FA1A75CFB100E7B573 /* dvd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dvd.png; sourceTree = "<group>"; };
+		A5A208FC1A75D1A800E7B573 /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
 		A5B332B81A6F545D007E41B2 /* RottenTomatos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenTomatos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B332BC1A6F545D007E41B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B332BD1A6F545D007E41B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				A5B332BF1A6F545D007E41B2 /* AppDelegate.h */,
 				A5B332C01A6F545D007E41B2 /* AppDelegate.m */,
 				A5B332C81A6F545D007E41B2 /* Images.xcassets */,
+				A5A208FC1A75D1A800E7B573 /* movie.png */,
+				A5A208FA1A75CFB100E7B573 /* dvd.png */,
 				A5B332CA1A6F545D007E41B2 /* LaunchScreen.xib */,
 				A5B332BB1A6F545D007E41B2 /* Supporting Files */,
 				A5B332E11A6F5501007E41B2 /* MoviesViewController.h */,
@@ -241,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A208FD1A75D1A800E7B573 /* movie.png in Resources */,
+				A5A208FB1A75CFB100E7B573 /* dvd.png in Resources */,
 				A5A208F91A75906E00E7B573 /* MovieDetailViewController.xib in Resources */,
 				A5B332CC1A6F545D007E41B2 /* LaunchScreen.xib in Resources */,
 				A5B332C91A6F545D007E41B2 /* Images.xcassets in Resources */,
