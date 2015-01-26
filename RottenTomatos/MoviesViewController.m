@@ -12,8 +12,13 @@
 #import "MovieDetailViewController.h"
 
 @interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
+{
+    UIRefreshControl *refreshControl;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 @property (nonatomic, strong) NSArray *names;
 @property (nonatomic, strong) NSArray *movies;
 
@@ -24,15 +29,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"Movies";
     
-    NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        self.movies = responseDictionary[@"movies"];
-        [self.tableView reloadData];
-    }];
+    refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+
+    [self fetchMovies];
 
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -56,11 +61,10 @@
     
     cell.titleLabel.text = movie[@"title"];
     cell.synopsisLabel.text = movie[@"synopsis"];
-    
+
+    [cell setLayoutMargins:UIEdgeInsetsZero];
     [cell.posterView setImageWithURL:[NSURL URLWithString:[movie valueForKeyPath:@"posters.thumbnail"]]];
-    
-    self.title = @"Movies";
-    
+
     return cell;
 }
 
@@ -71,6 +75,29 @@
     vc.movie = self.movies[indexPath.row];
     
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)fetchMovies {
+    NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError != nil) {
+            self.errorLabel.hidden = NO;
+            self.searchBar.hidden = YES;
+        } else {
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            self.movies = responseDictionary[@"movies"];
+            self.errorLabel.hidden = YES;
+            self.searchBar.hidden = NO;
+            [self.tableView reloadData];
+        }
+    }];
+}
+
+- (void)refresh:(id)sender {
+    [self fetchMovies];
+    [(UIRefreshControl *)sender endRefreshing];
 }
 
 /*
