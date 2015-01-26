@@ -25,17 +25,6 @@
                     <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     <color key="sectionIndexTrackingBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
-                <tabBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="PG4-aP-d3X">
-                    <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <items>
-                        <tabBarItem title="Box Office" image="movie.png" selectedImage="movie.png" id="yrB-id-hX5"/>
-                        <tabBarItem title="DVD" image="dvd.png" selectedImage="dvd.png" id="XrC-Dw-cfn"/>
-                    </items>
-                    <color key="tintColor" red="0.99516159019999995" green="1" blue="0.01785580178" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <color key="selectedImageTintColor" red="0.99516159019999995" green="1" blue="0.01785580178" alpha="1" colorSpace="calibratedRGB"/>
-                </tabBar>
                 <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" placeholder="Search movies" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCG-Gh-mgM">
                     <rect key="frame" x="0.0" y="60" width="320" height="44"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -61,10 +50,6 @@
             <point key="canvasLocation" x="31" y="329"/>
         </view>
     </objects>
-    <resources>
-        <image name="dvd.png" width="32" height="32"/>
-        <image name="movie.png" width="32" height="32"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

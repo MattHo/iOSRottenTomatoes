@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53F37451A7701F5009F4117 /* MovieDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A53F37441A7701F5009F4117 /* MovieDetailLabel.m */; };
 		A5A208F81A75906E00E7B573 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A208F61A75906E00E7B573 /* MovieDetailViewController.m */; };
 		A5A208F91A75906E00E7B573 /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A208F71A75906E00E7B573 /* MovieDetailViewController.xib */; };
 		A5A208FB1A75CFB100E7B573 /* dvd.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A208FA1A75CFB100E7B573 /* dvd.png */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		91020A25906EA7EFBA666C99 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A53F37431A7701F5009F4117 /* MovieDetailLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailLabel.h; sourceTree = "<group>"; };
+		A53F37441A7701F5009F4117 /* MovieDetailLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailLabel.m; sourceTree = "<group>"; };
 		A5A208F51A75906E00E7B573 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		A5A208F61A75906E00E7B573 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 		A5A208F71A75906E00E7B573 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				A5A208F51A75906E00E7B573 /* MovieDetailViewController.h */,
 				A5A208F61A75906E00E7B573 /* MovieDetailViewController.m */,
 				A5A208F71A75906E00E7B573 /* MovieDetailViewController.xib */,
+				A53F37431A7701F5009F4117 /* MovieDetailLabel.h */,
+				A53F37441A7701F5009F4117 /* MovieDetailLabel.m */,
 			);
 			path = RottenTomatos;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			files = (
 				A5B332C11A6F545D007E41B2 /* AppDelegate.m in Sources */,
 				A5B332BE1A6F545D007E41B2 /* main.m in Sources */,
+				A53F37451A7701F5009F4117 /* MovieDetailLabel.m in Sources */,
 				A5A208F81A75906E00E7B573 /* MovieDetailViewController.m in Sources */,
 				A5B332EC1A70FFF9007E41B2 /* MovieCell.m in Sources */,
 				A5B332E41A6F5501007E41B2 /* MoviesViewController.m in Sources */,

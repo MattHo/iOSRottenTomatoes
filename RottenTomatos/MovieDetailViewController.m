@@ -25,7 +25,8 @@
     // Do any additional setup after loading the view from its nib.
     [self loadPoster];
     [self setupScrollView];
-
+    
+    
     self.title = self.movie[@"title"];
 }
 
