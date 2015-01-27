@@ -10,6 +10,7 @@
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "MovieDetailViewController.h"
+#import "JGProgressHUD.h"
 
 @interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -78,6 +79,10 @@
 }
 
 - (void)fetchMovies {
+    JGProgressHUD *HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    HUD.textLabel.text = @"Loading";
+    [HUD showInView:self.view];
+    
     NSURL *url = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=20&country=us"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -85,12 +90,14 @@
         if (connectionError != nil) {
             self.errorLabel.hidden = NO;
             self.searchBar.hidden = YES;
+            [HUD dismissAfterDelay:0.3];
         } else {
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             self.movies = responseDictionary[@"movies"];
             self.errorLabel.hidden = YES;
             self.searchBar.hidden = NO;
             [self.tableView reloadData];
+            [HUD dismissAfterDelay:0.3];
         }
     }];
 }
